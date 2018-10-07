@@ -12,7 +12,7 @@ import xiao.free.superadapter.recycview.base.ViewHolder;
 import java.util.List;
 
 /**
- * Created by zhy on 16/4/9.
+ * Created by xiaoguochang on 18/10/7.
  */
 public class MultiItemTypeAdapter<T> extends RecyclerView.Adapter<ViewHolder> {
     protected Context mContext;
@@ -20,6 +20,7 @@ public class MultiItemTypeAdapter<T> extends RecyclerView.Adapter<ViewHolder> {
 
     protected ItemViewDelegateManager mItemViewDelegateManager;
     protected OnItemClickListener mOnItemClickListener;
+    protected OnItemLongClickListener mOnItemLongClickListener;
 
 
     public MultiItemTypeAdapter(Context context, List<T> datas) {
@@ -73,9 +74,9 @@ public class MultiItemTypeAdapter<T> extends RecyclerView.Adapter<ViewHolder> {
         viewHolder.getConvertView().setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                if (mOnItemClickListener != null) {
+                if (mOnItemLongClickListener != null) {
                     int position = viewHolder.getAdapterPosition();
-                    return mOnItemClickListener.onItemLongClick(v, viewHolder, position);
+                    return mOnItemLongClickListener.onItemLongClick(v, viewHolder, position);
                 }
                 return false;
             }
@@ -112,13 +113,19 @@ public class MultiItemTypeAdapter<T> extends RecyclerView.Adapter<ViewHolder> {
         return mItemViewDelegateManager.getItemViewDelegateCount() > 0;
     }
 
-    public interface OnItemClickListener {
-        void onItemClick(View view, RecyclerView.ViewHolder holder, int position);
-
-        boolean onItemLongClick(View view, RecyclerView.ViewHolder holder, int position);
-    }
-
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.mOnItemClickListener = onItemClickListener;
+    }
+
+    public void setOnItemClickListener(OnItemLongClickListener onItemLongClickListener) {
+        this.mOnItemLongClickListener = onItemLongClickListener;
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(View view, RecyclerView.ViewHolder holder, int position);
+    }
+
+    public interface OnItemLongClickListener {
+        boolean onItemLongClick(View view, RecyclerView.ViewHolder holder, int position);
     }
 }

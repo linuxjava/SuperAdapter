@@ -6,7 +6,7 @@ import xiao.free.superadapter.listview.ViewHolder;
 
 
 /**
- * Created by zhy on 16/6/22.
+ * Created by xiaoguochang on 18/10/7.
  */
 public class ItemViewDelegateManager<T>
 {

@@ -11,7 +11,7 @@ import xiao.free.superadapter.recycview.utils.WrapperUtils;
 
 
 /**
- * Created by zhy on 16/6/23.
+ * Created by xiaoguochang on 18/10/7.
  */
 public class HeaderAndFooterWrapper<T> extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 {

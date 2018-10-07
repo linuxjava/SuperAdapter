@@ -10,7 +10,7 @@ import xiao.free.superadapter.recycview.utils.WrapperUtils;
 
 
 /**
- * Created by zhy on 16/6/23.
+ * Created by xiaoguochang on 18/10/7.
  */
 public class EmptyWrapper<T> extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public static final int ITEM_TYPE_EMPTY = Integer.MAX_VALUE - 1;

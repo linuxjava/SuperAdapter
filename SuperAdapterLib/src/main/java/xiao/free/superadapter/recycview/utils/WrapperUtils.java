@@ -6,7 +6,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.ViewGroup;
 
 /**
- * Created by zhy on 16/6/28.
+ * Created by xiaoguochang on 18/10/7.
  */
 public class WrapperUtils {
     public interface SpanSizeCallback {
