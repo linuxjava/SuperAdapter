@@ -77,7 +77,8 @@ public static class RecvTextHolder implements ItemViewDelegate<ChatMessage> {
 ![image](https://github.com/linuxjava/SuperAdapter/raw/master/screenshot/1.png)
 
 ## 感谢
-项目源码来源(https://github.com/hongyangAndroid/baseAdapter)，在此基础是对MultiItemTypeAdapter和HeaderAndFooterWrapper进行了优化。
+项目源码来源[https://github.com/hongyangAndroid/baseAdapter](https://github.com/hongyangAndroid/baseAdapter)
+，在此基础是对MultiItemTypeAdapter和HeaderAndFooterWrapper进行了优化。
 
 
 
