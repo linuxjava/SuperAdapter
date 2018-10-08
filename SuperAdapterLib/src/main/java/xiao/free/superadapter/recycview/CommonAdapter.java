@@ -17,12 +17,11 @@ public abstract class CommonAdapter<T> extends MultiItemTypeAdapter<T> {
     protected List<T> mDatas;
     protected LayoutInflater mInflater;
 
-    public CommonAdapter(final Context context, final int layoutId, List<T> datas) {
-        super(context, datas);
+    public CommonAdapter(final Context context, final int layoutId) {
+        super(context);
         mContext = context;
         mInflater = LayoutInflater.from(context);
         mLayoutId = layoutId;
-        mDatas = datas;
 
         addItemViewDelegate(new ItemViewDelegate<T>() {
             @Override
