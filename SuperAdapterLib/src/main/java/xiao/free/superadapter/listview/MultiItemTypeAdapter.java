@@ -18,9 +18,8 @@ public class MultiItemTypeAdapter<T> extends BaseAdapter {
     private ItemViewDelegateManager mItemViewDelegateManager;
 
 
-    public MultiItemTypeAdapter(Context context, List<T> datas) {
+    public MultiItemTypeAdapter(Context context) {
         this.mContext = context;
-        this.mDatas = datas;
         mItemViewDelegateManager = new ItemViewDelegateManager();
     }
 
@@ -92,5 +91,11 @@ public class MultiItemTypeAdapter<T> extends BaseAdapter {
         return position;
     }
 
+    public List<T> getDatas() {
+        return mDatas;
+    }
 
+    public void setDatas(List<T> mDatas) {
+        this.mDatas = mDatas;
+    }
 }
