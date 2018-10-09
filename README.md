@@ -12,6 +12,10 @@
 [Download](https://github.com/linuxjava/SuperAdapter/raw/master/apk/app-debug.apk)
 
 ## 使用
+### 添加依赖
+```xml
+implementation 'xiao.free.superadapter:SuperAdapterLib:v0.1'
+```
 ### 简单使用
 创建CommonAdapter即可
 ```xml
