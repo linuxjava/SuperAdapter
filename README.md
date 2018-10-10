@@ -14,7 +14,7 @@
 ## 使用
 ### 添加依赖
 ```xml
-implementation 'xiao.free.superadapter:SuperAdapterLib:v0.1'
+implementation 'xiao.free.superadapter:SuperAdapterLib:0.2'
 ```
 ### 简单使用
 创建CommonAdapter即可
