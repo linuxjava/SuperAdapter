@@ -164,8 +164,23 @@ public class MultiItemTypeAdapter<T> extends RecyclerView.Adapter<ViewHolder> {
         return mDatas;
     }
 
+    /**
+     * 添加ItemViewDelegate(viewType内部维护)
+     * @param itemViewDelegate
+     */
     public void addItemViewDelegate(ItemViewDelegate<T> itemViewDelegate) {
         mItemViewDelegateManager.addDelegate(itemViewDelegate);
+    }
+
+    /**
+     * 添加ItemViewDelegate(viewType自定义)
+     * @param viewType
+     * @param itemViewDelegate
+     * @return
+     */
+    public MultiItemTypeAdapter addItemViewDelegate(int viewType, ItemViewDelegate<T> itemViewDelegate) {
+        mItemViewDelegateManager.addDelegate(viewType, itemViewDelegate);
+        return this;
     }
 
     protected boolean useItemViewDelegateManager() {
